@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.example.fourtoarow.MainViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/textTeamRed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="40dp"
+            android:text="@string/text_team_red"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/marketRed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{viewmodel.markerRed.toString()}"
+            android:textColor="@color/white"
+            android:textSize="60sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/textTeamRed"
+            app:layout_constraintStart_toStartOf="@+id/textTeamRed"
+            app:layout_constraintTop_toBottomOf="@id/textTeamRed" />
+
+
+        <TextView
+            android:id="@+id/textTeamYellow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="20dp"
+            android:text="@string/text_team_yellow"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/marketYellow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{viewmodel.markerYellow.toString()}"
+            android:textColor="@color/white"
+            android:textSize="60sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/textTeamYellow"
+            app:layout_constraintStart_toStartOf="@+id/textTeamYellow"
+            app:layout_constraintTop_toBottomOf="@id/textTeamYellow" />
+
+        <Button
+            android:id="@+id/resetButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/restart"
+            app:layout_constraintBottom_toBottomOf="@+id/marketYellow"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/resetMarket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/reset_market"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/resetButton" />
+
+        <LinearLayout
+            android:id="@+id/LinearLayoutArrows"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/resetMarket">
+
+            <ImageView
+                android:id="@+id/arrow1"
+                style="@style/array_style"
+                android:contentDescription="@string/description_arrow" />
+
+            <ImageView
+                android:id="@+id/arrow2"
+                style="@style/array_style"
+                android:contentDescription="@string/description_arrow" />
+
+            <ImageView
+                android:id="@+id/arrow3"
+                style="@style/array_style"
+                android:contentDescription="@string/description_arrow" />
+
+            <ImageView
+                android:id="@+id/arrow4"
+                style="@style/array_style"
+                android:contentDescription="@string/description_arrow" />
+
+            <ImageView
+                android:id="@+id/arrow5"
+                style="@style/array_style"
+                android:contentDescription="@string/description_arrow" />
+
+            <ImageView
+                android:id="@+id/arrow6"
+                style="@style/array_style"
+                android:contentDescription="@string/description_arrow" />
+
+            <ImageView
+                android:id="@+id/arrow7"
+                style="@style/array_style"
+                android:contentDescription="@string/description_arrow" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LinearLayoutColum1"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/LinearLayoutArrows"
+            app:layout_constraintTop_toBottomOf="@id/LinearLayoutArrows">
+
+            <ImageView
+                android:id="@+id/box00"
+                style="@style/boxes_style"
+                android:contentDescription="@string/description_box" />
+
+            <ImageView
+                android:id="@+id/box01"
+                style="@style/boxes_style"
+                android:contentDescription="@string/description_box" />
+
+            <ImageView
+                android:id="@+id/box02"
+                style="@style/boxes_style"
+                android:contentDescription="@string/description_box" />
+
+            <ImageView
+                android:id="@+id/box03"
+                style="@style/boxes_style"
+                android:contentDescription="@string/description_box" />
+
+            <ImageView
+                android:id="@+id/box04"
+                style="@style/boxes_style"
+                android:contentDescription="@string/description_box" />
+
+            <ImageView
+                android:id="@+id/box05"
+                style="@style/boxes_style"
+                android:contentDescription="@string/description_box" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LinearLayoutColum2"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/LinearLayoutColum1"
+            app:layout_constraintTop_toBottomOf="@id/LinearLayoutArrows">
+
+            <ImageView
+                android:id="@+id/box06"
+                style="@style/boxes_style"
+                android:contentDescription="@string/description_box" />
+
+            <ImageView
+                android:id="@+id/box07"
+                style="@style/boxes_style"
+                android:contentDescription="@string/description_box" />
+
+            <ImageView
+                android:id="@+id/box08"
+                style="@style/boxes_style"
+                android:contentDescription="@string/description_box" />
+
+            <ImageView
+                android:id="@+id/box09"
+                style="@style/boxes_style"
+                android:contentDescription="@string/description_box" />
+
+            <ImageView
+                android:id="@+id/box10"
+                style="@style/boxes_style"
+                android:contentDescription="@string/description_box" />
+
+            <ImageView
+                android:id="@+id/box11"
+                style="@style/boxes_style"
+                android:contentDescription="@string/description_box" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LinearLayoutColum3"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/LinearLayoutColum2"
+            app:layout_constraintTop_toBottomOf="@id/LinearLayoutArrows">
+
+            <ImageView
+                android:id="@+id/box12"
+                style="@style/boxes_style"
+                android:contentDescription="@string/description_box" />
+
+            <ImageView
+                android:id="@+id/box13"
+                style="@style/boxes_style"
+                android:contentDescription="@string/description_box" />
+
+            <ImageView
+                android:id="@+id/box14"
+                style="@style/boxes_style"
+                android:contentDescription="@string/description_box" />
+
+            <ImageView
+                android:id="@+id/box15"
+                style="@style/boxes_style"
+                android:contentDescription="@string/description_box" />
+
+            <ImageView
+                android:id="@+id/box16"
+                style="@style/boxes_style"
+                android:contentDescription="@string/description_box" />
+
+            <ImageView
+                android:id="@+id/box17"
+                style="@style/boxes_style"
+                android:contentDescription="@string/description_box" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LinearLayoutColum4"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/LinearLayoutColum3"
+            app:layout_constraintTop_toBottomOf="@id/LinearLayoutArrows">
+
+            <ImageView
+                android:id="@+id/box18"
+                style="@style/boxes_style"
+                android:contentDescription="@string/description_box" />
+
+            <ImageView
+                android:id="@+id/box19"
+                style="@style/boxes_style"
+                android:contentDescription="@string/description_box" />
+
+            <ImageView
+                android:id="@+id/box20"
+                style="@style/boxes_style"
+                android:contentDescription="@string/description_box" />
+
+            <ImageView
+                android:id="@+id/box21"
+                style="@style/boxes_style"
+                android:contentDescription="@string/description_box" />
+
+            <ImageView
+                android:id="@+id/box22"
+                style="@style/boxes_style"
+                android:contentDescription="@string/description_box" />
+
+            <ImageView
+                android:id="@+id/box23"
+                style="@style/boxes_style"
+                android:contentDescription="@string/description_box" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LinearLayoutColum5"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/LinearLayoutColum4"
+            app:layout_constraintTop_toBottomOf="@id/LinearLayoutArrows">
+
+            <ImageView
+                android:id="@+id/box24"
+                style="@style/boxes_style"
+                android:contentDescription="@string/description_box" />
+
+            <ImageView
+                android:id="@+id/box25"
+                style="@style/boxes_style"
+                android:contentDescription="@string/description_box" />
+
+            <ImageView
+                android:id="@+id/box26"
+                style="@style/boxes_style"
+                android:contentDescription="@string/description_box" />
+
+            <ImageView
+                android:id="@+id/box27"
+                style="@style/boxes_style"
+                android:contentDescription="@string/description_box" />
+
+            <ImageView
+                android:id="@+id/box28"
+                style="@style/boxes_style"
+                android:contentDescription="@string/description_box" />
+
+            <ImageView
+                android:id="@+id/box29"
+                style="@style/boxes_style"
+                android:contentDescription="@string/description_box" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LinearLayoutColum6"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/LinearLayoutColum5"
+            app:layout_constraintTop_toBottomOf="@id/LinearLayoutArrows">
+
+            <ImageView
+                android:id="@+id/box30"
+                style="@style/boxes_style"
+                android:contentDescription="@string/description_box" />
+
+            <ImageView
+                android:id="@+id/box31"
+                style="@style/boxes_style"
+                android:contentDescription="@string/description_box" />
+
+            <ImageView
+                android:id="@+id/box32"
+                style="@style/boxes_style"
+                android:contentDescription="@string/description_box" />
+
+            <ImageView
+                android:id="@+id/box33"
+                style="@style/boxes_style"
+                android:contentDescription="@string/description_box" />
+
+            <ImageView
+                android:id="@+id/box34"
+                style="@style/boxes_style"
+                android:contentDescription="@string/description_box" />
+
+            <ImageView
+                android:id="@+id/box35"
+                style="@style/boxes_style"
+                android:contentDescription="@string/description_box" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LinearLayoutColum7"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/LinearLayoutColum6"
+            app:layout_constraintTop_toBottomOf="@id/LinearLayoutArrows">
+
+            <ImageView
+                android:id="@+id/box36"
+                style="@style/boxes_style"
+                android:contentDescription="@string/description_box" />
+
+            <ImageView
+                android:id="@+id/box37"
+                style="@style/boxes_style"
+                android:contentDescription="@string/description_box" />
+
+            <ImageView
+                android:id="@+id/box38"
+                style="@style/boxes_style"
+                android:contentDescription="@string/description_box" />
+
+            <ImageView
+                android:id="@+id/box39"
+                style="@style/boxes_style"
+                android:contentDescription="@string/description_box" />
+
+            <ImageView
+                android:id="@+id/box40"
+                style="@style/boxes_style"
+                android:contentDescription="@string/description_box" />
+
+            <ImageView
+                android:id="@+id/box41"
+                style="@style/boxes_style"
+                android:contentDescription="@string/description_box" />
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

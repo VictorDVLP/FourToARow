@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="array_style">
+        <item name="android:layout_width">@dimen/drawable_dimen</item>
+        <item name="android:layout_height">@dimen/drawable_dimen</item>
+        <item name="android:src">@drawable/arrow</item>
+    </style>
+
+    <style name="boxes_style">
+        <item name="android:layout_width">@dimen/drawable_dimen</item>
+        <item name="android:layout_height">@dimen/drawable_dimen</item>
+        <item name="android:src">@drawable/empty_piece</item>
+    </style>
+</resources>

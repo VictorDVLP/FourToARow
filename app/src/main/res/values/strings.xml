@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">FourToARow</string>
+    <string name="text_team_red">Red</string>
+    <string name="text_team_yellow">Yellow</string>
+    <string name="restart">Restart</string>
+    <string name="reset_market">Reset Market</string>
+    <string name="zero">0</string>
+    <string name="description_arrow">ImageView of Arrow</string>
+    <string name="description_box">ImageView of Box</string>
+    <string name="_1_s_gana">%1$s gana</string>
+    <string name="champion">¡Champion!</string>
+    <string name="returngame">Return</string>
+</resources>
