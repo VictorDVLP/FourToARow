@@ -1,12 +1,11 @@
-# Tres en Raya con Pruebas Extensas
+# Tic-Tac-Toe with Extensive Testing
 
-## Funcionalidad
-Se trata de una aplicación que contiene el mitico juego de las 3 en raya. Consta de 3 funcionalidades principalmente:
- - Una que ejecuta el juego
- - Otra que se encarga de guardar la información de las partidas jugadas
- - Y por ultimo una pantalla que consume una API que muestra una lista de los juegos mas vendidos actualmente
+## Functionality
+This is an application that features the classic Tic-Tac-Toe game. It primarily consists of 3 functionalities:
+ · Game Execution: Allows users to play the game.
+ · Game History: Saves information about played games.
+ · Bestsellers API: Consumes an API to display a list of currently best-selling games.
 
-## Objetivo del proyecto
-Este proyrecto fue creado con el proposito de hacer test unitarios, test de integración y test de UI. Se realizan test utilizando diferentes metodos,como la utilización de dobles de test, mocks y la configuración de librerias de terceros como Retrofit, Room y Hilt para poder hacer test con las clases 
-reales.
+## Project Objective
+The primary goal of this project was to implement unit tests, integration tests, and UI tests. Tests were conducted using various methods, such as test doubles, mocks, and configuring third-party libraries like Retrofit, Room, and Hilt to enable testing with real classes.
 
